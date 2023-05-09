@@ -50,43 +50,6 @@
         }
       },
       {
-        "HashCode": -221790251,
-        "Kind": "Components.Component",
-        "Name": "MTGBlazor.App",
-        "AssemblyName": "MTGBlazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "MTGBlazor.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "MTGBlazor",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -2143936945,
-        "Kind": "Components.Component",
-        "Name": "MTGBlazor.App",
-        "AssemblyName": "MTGBlazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MTGBlazor.App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "MTGBlazor.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "MTGBlazor",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
         "HashCode": -798625089,
         "Kind": "Components.Component",
         "Name": "MTGBlazor.Shared.SurveyPrompt",
@@ -284,6 +247,43 @@
           "Common.TypeName": "MTGBlazor.Shared.NavMenu",
           "Common.TypeNameIdentifier": "NavMenu",
           "Common.TypeNamespace": "MTGBlazor.Shared",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -221790251,
+        "Kind": "Components.Component",
+        "Name": "MTGBlazor.App",
+        "AssemblyName": "MTGBlazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "MTGBlazor.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "MTGBlazor",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -2143936945,
+        "Kind": "Components.Component",
+        "Name": "MTGBlazor.App",
+        "AssemblyName": "MTGBlazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MTGBlazor.App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "MTGBlazor.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "MTGBlazor",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
