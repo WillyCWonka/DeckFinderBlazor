@@ -17,8 +17,6 @@ public class DeckService
         var result = await _database.GetDeckAsync(card1, card2);
 
         return result;
-        //  await Task.Delay(1000);
-        //return new List<Card>() { new Card() { Name = "test", Count = 3 } };
     }
 
     public async Task<List<string>> AutoComplete(string card1)

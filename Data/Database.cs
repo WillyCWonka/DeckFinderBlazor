@@ -3,7 +3,6 @@ using Neo4j.Driver;
 
 class LogWrapper : Neo4j.Driver.ILogger
 {
-
     public void Error(Exception cause, string message, params object[] args) => Console.WriteLine(message, args);
     public void Warn(Exception cause, string message, params object[] args) => Console.WriteLine(message, args);
     public void Info(string message, params object[] args) => Console.WriteLine(message, args);
