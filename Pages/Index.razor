@@ -1,0 +1,78 @@
+@page "/"
+@using MTGBlazor.Data
+@using Blazored.Typeahead
+@inject DeckService DeckService
+
+<div>
+    <h1 id="tableLabel">Find a Deck</h1>
+    <p>Enter two cards and I'll give you a deck using both.</p>
+
+    <BlazoredTypeahead SearchMethod="SearchCards1" @bind-Value="selectedCard1">
+        <SelectedTemplate>
+            @context
+        </SelectedTemplate>
+        <ResultTemplate>@context</ResultTemplate>
+    </BlazoredTypeahead>
+
+    <br>
+
+    <BlazoredTypeahead SearchMethod="SearchCards2" @bind-Value="selectedCard2">
+        <SelectedTemplate>
+            @context
+        </SelectedTemplate>
+        <ResultTemplate>@context</ResultTemplate>
+    </BlazoredTypeahead>
+
+    <br>
+
+    <button className="btn btn-primary" @onclick="GetDeck">Find Deck</button>
+
+    @if (cards != null)
+    {
+        <table className="table table-striped" aria-labelledby="tableLabel">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var card in cards)
+                {
+                    <tr key=@card.Name>
+                        <td>@card.Count</td>
+                        <td>@card.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private IEnumerable<Card>? cards;
+    private string selectedCard1 = "";
+    private string selectedCard2 = "";
+
+    private async Task<IEnumerable<string>> SearchCards1(string card1)
+    {
+        return await DeckService.AutoComplete(card1);
+    }
+
+    private async Task<IEnumerable<string>> SearchCards2(string card2)
+    {
+        return await DeckService.AutoComplete(selectedCard1, card2);
+    }
+
+    protected override void OnInitialized()
+    {
+
+    }
+
+    private async Task GetDeck()
+    {
+        cards = await DeckService.Get(selectedCard1, selectedCard2);
+    }
+
+}
